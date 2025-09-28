@@ -8,9 +8,10 @@ function FormList() {
     "Laptop Handover",
     "Bamboo HR Profile Setup",
     "Welcome Email with Key Contacts Intro",
-   
+    "Employee documents received",
   ];
 
+  const [userName, setUserName] = useState(""); // state for Name
   const [responses, setResponses] = useState({});
   const [notes, setNotes] = useState({});
 
@@ -24,6 +25,18 @@ function FormList() {
 
   return (
     <div className="container mt-4">
+      {/* 👇 Name Line */}
+      <div className="name-row mb-4">
+        <label className="name-label">Name:</label>
+        <input
+          type="text"
+          className="name-input"
+          placeholder="Enter your  employee name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+      </div>
+
       <ul className="list-group">
         {steps.map((step, index) => (
           <li
@@ -33,7 +46,7 @@ function FormList() {
             {/* Step Label */}
             <span className="step-label">{step}</span>
 
-            {/* Radio Buttons First */}
+            {/* Radio Buttons */}
             <div className="radio-group">
               <div className="form-check form-check-inline">
                 <input
@@ -60,13 +73,12 @@ function FormList() {
               </div>
             </div>
 
-            {/* Comment Box with Label */}
+            {/* Comment Box */}
             <div className="comment-box">
               <label className="comment-label">Comment Box:</label>
               <input
                 type="text"
                 className="step-input"
-                
                 value={notes[step] || ""}
                 onChange={(e) => handleNoteChange(step, e.target.value)}
               />

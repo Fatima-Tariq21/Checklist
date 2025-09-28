@@ -1,3 +1,4 @@
+/* ===== Header ===== */
 .header {
   background-color: #12343b;
   padding: 30px;
@@ -14,6 +15,35 @@
   letter-spacing: 2px;
 }
 
+/* ===== Name Row ===== */
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.name-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #12343b;
+}
+
+.name-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.name-input:focus {
+  border-color: #e48a37;
+  box-shadow: 0 0 5px rgba(228, 138, 55, 0.5);
+}
+
+/* ===== Steps List ===== */
 .list-group-item {
   display: flex;
   align-items: center;
@@ -23,14 +53,17 @@
   border-radius: 8px;
   margin-bottom: 10px;
   padding: 15px 20px;
-  transition: background-color 0.2s ease;
   gap: 15px;
+  /* 👇 hover remove */
+  transition: none;
 }
 
 .list-group-item:hover {
-  background-color: #e9ecef;
+  background-color: #f8f9fa; /* same as default, no hover */
+  transform: none;
 }
 
+/* ===== Step Label ===== */
 .step-label {
   flex: 1;
   font-weight: 500;
@@ -38,6 +71,7 @@
   color: #333;
 }
 
+/* ===== Radio Group ===== */
 .radio-group {
   flex: 1;
   display: flex;
@@ -45,6 +79,24 @@
   gap: 15px;
 }
 
+.form-check-label {
+  font-size: 15px;
+  color: #12343b;
+  font-weight: 500;
+}
+
+/* 👇 custom radio (remove default blue, add orange when checked) */
+.form-check-input {
+  accent-color: #e48a37; /* modern browsers */
+  cursor: pointer;
+}
+
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===== Comment Box ===== */
 .comment-box {
   display: flex;
   align-items: center;
@@ -61,7 +113,15 @@
 
 .step-input {
   flex: 1;
-  padding: 8px;
+  padding: 8px 10px;
+  font-size: 15px;
   border: 2px solid #000;
   border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.step-input:focus {
+  border-color: #e48a37;
+  box-shadow: 0 0 5px rgba(228, 138, 55, 0.4);
 }
