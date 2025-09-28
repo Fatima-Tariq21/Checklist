@@ -1,0 +1,81 @@
+import React, { useState } from "react";
+
+function FormList() {
+  const steps = [
+    "Offer Sent",
+    "Offer Signed",
+    "Background Check Processed",
+    "Laptop Handover",
+    "Bamboo HR Profile Setup",
+    "Welcome Email with Key Contacts Intro",
+   
+  ];
+
+  const [responses, setResponses] = useState({});
+  const [notes, setNotes] = useState({});
+
+  const handleChange = (step, value) => {
+    setResponses({ ...responses, [step]: value });
+  };
+
+  const handleNoteChange = (step, value) => {
+    setNotes({ ...notes, [step]: value });
+  };
+
+  return (
+    <div className="container mt-4">
+      <ul className="list-group">
+        {steps.map((step, index) => (
+          <li
+            key={index}
+            className="list-group-item d-flex justify-content-between align-items-center"
+          >
+            {/* Step Label */}
+            <span className="step-label">{step}</span>
+
+            {/* Radio Buttons First */}
+            <div className="radio-group">
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name={step}
+                  value="Yes"
+                  onChange={() => handleChange(step, "Yes")}
+                  checked={responses[step] === "Yes"}
+                />
+                <label className="form-check-label">Yes</label>
+              </div>
+
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name={step}
+                  value="No"
+                  onChange={() => handleChange(step, "No")}
+                  checked={responses[step] === "No"}
+                />
+                <label className="form-check-label">No</label>
+              </div>
+            </div>
+
+            {/* Comment Box with Label */}
+            <div className="comment-box">
+              <label className="comment-label">Comment Box:</label>
+              <input
+                type="text"
+                className="step-input"
+                
+                value={notes[step] || ""}
+                onChange={(e) => handleNoteChange(step, e.target.value)}
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FormList;
