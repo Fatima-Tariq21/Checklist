@@ -14,14 +14,16 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "quickupdate": "git add . && git commit -m 'update' && git push origin main && npm run deploy"
-  },
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "quickupdate": "git add . && git commit -m 'update' && git push origin main && npm run deploy",
+  "q": "npm run quickupdate"
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
