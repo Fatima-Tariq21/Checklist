@@ -5,10 +5,11 @@ function FormList() {
     "Offer Sent",
     "Offer Signed",
     "Background Check Processed",
+     "Employee documents received",
     "Laptop Handover",
     "Bamboo HR Profile Setup",
     "Welcome Email with Key Contacts Intro",
-    "Employee documents received",
+   
   ];
 
   const [userName, setUserName] = useState(""); // state for Name
