@@ -1,4 +1,3 @@
-/* ===== Header ===== */
 .header {
   background-color: #12343b;
   padding: 30px;
@@ -6,6 +5,7 @@
   border-bottom: 3px solid #f8c291;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 
 .header h1 {
   color: #e48a37;
@@ -15,11 +15,12 @@
   letter-spacing: 2px;
 }
 
-/* ===== Name Row ===== */
 .name-row {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 12px;
+  margin-top: 20px;
 }
 
 .name-label {
@@ -29,21 +30,20 @@
 }
 
 .name-input {
-  flex: 1;
-  padding: 10px 12px;
-  font-size: 16px;
+  width: 300px;
+  padding: 8px 10px;
+  font-size: 15px;
   border: 2px solid #000;
-  border-radius: 6px;
+  border-radius: 5px;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 .name-input:focus {
   border-color: #e48a37;
-  box-shadow: 0 0 5px rgba(228, 138, 55, 0.5);
+  box-shadow: 0 0 5px rgba(228, 138, 55, 0.4);
 }
 
-/* ===== Steps List ===== */
 .list-group-item {
   display: flex;
   align-items: center;
@@ -54,16 +54,14 @@
   margin-bottom: 10px;
   padding: 15px 20px;
   gap: 15px;
-  /* 👇 hover remove */
   transition: none;
 }
 
 .list-group-item:hover {
-  background-color: #f8f9fa; /* same as default, no hover */
+  background-color: #f8f9fa;
   transform: none;
 }
 
-/* ===== Step Label ===== */
 .step-label {
   flex: 1;
   font-weight: 500;
@@ -71,7 +69,6 @@
   color: #333;
 }
 
-/* ===== Radio Group ===== */
 .radio-group {
   flex: 1;
   display: flex;
@@ -85,9 +82,8 @@
   font-weight: 500;
 }
 
-/* 👇 custom radio (remove default blue, add orange when checked) */
 .form-check-input {
-  accent-color: #e48a37; /* modern browsers */
+  accent-color: #e48a37;
   cursor: pointer;
 }
 
@@ -96,7 +92,6 @@
   box-shadow: none;
 }
 
-/* ===== Comment Box ===== */
 .comment-box {
   display: flex;
   align-items: center;
@@ -124,13 +119,4 @@
 .step-input:focus {
   border-color: #e48a37;
   box-shadow: 0 0 5px rgba(228, 138, 55, 0.4);
-}
-.name-input {
-  flex: 1;
-  padding: 10px 12px;
-  font-size: 16px;
-  border: 2px solid #000;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.3s ease;
 }

@@ -28,7 +28,7 @@ function FormList() {
     <div className="container mt-4">
       {/* 👇 Name Line */}
       <div className="name-row mb-4">
-        <label className="name-label">Name:</label>
+        <label className="name-label">Employee Name:</label>
         <input
           type="text"
           className="name-input"
@@ -76,7 +76,7 @@ function FormList() {
 
             {/* Comment Box */}
             <div className="comment-box">
-              <label className="comment-label">Comment Box:</label>
+              <label className="comment-label">Comments:</label>
               <input
                 type="text"
                 className="step-input"
@@ -84,6 +84,8 @@ function FormList() {
                 onChange={(e) => handleNoteChange(step, e.target.value)}
               />
             </div>
+            
+
           </li>
         ))}
       </ul>
